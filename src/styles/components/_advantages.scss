@@ -1,0 +1,32 @@
+.advantages {
+  font-family: 'TTTravels-Medium';
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+
+  display: flex;
+
+  margin-bottom: 149px;
+  & li {
+    height: 328px;
+    width: 300px;
+    background-color: #f3f6fb;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    & img {
+      //   margin-top: 25%;
+      margin: 0 auto;
+    }
+  }
+
+  & h3 {
+    margin-top: 20px;
+  }
+
+  & p {
+    display: none;
+  }
+}

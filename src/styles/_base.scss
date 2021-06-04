@@ -106,6 +106,6 @@ textarea {
     width: 648px;
   }
   @include for-size(desktop) {
-    width: 1320px;
+    max-width: 1320px;
   }
 }

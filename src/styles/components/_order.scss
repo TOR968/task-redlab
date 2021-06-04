@@ -1,0 +1,59 @@
+.order {
+  position: relative;
+  font-family: 'TTTravels-Regular';
+  color: $main-text-color;
+  display: flex;
+  align-items: center;
+  margin-bottom: 73px;
+
+  //   justify-content: center;
+  & .title-text {
+    // display: inline-block;
+    justify-content: center;
+    padding-left: 155px;
+  }
+  & h1 {
+    height: 252px;
+    font-size: 76px;
+    line-height: 110%;
+    margin-bottom: 30px;
+  }
+  & p {
+    font-size: 18px;
+    line-height: 140%;
+  }
+  & .order-btn {
+    font-family: 'TTTravels-Medium';
+    color: $text-collor;
+    text-align: center;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 195px;
+    width: 195px;
+    background: #5a30f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    animation: order-btn infinite 50s linear;
+  }
+}
+
+@keyframes order-btn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

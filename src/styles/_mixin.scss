@@ -4,11 +4,11 @@
       @content;
     }
   } @else if $size == tablet {
-    @media screen and (min-width: 648px) and (max-width: 1279px) {
+    @media screen and (min-width: 648px) and (max-width: 904px) {
       @content;
     }
   } @else if $size == desktop {
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 905px) {
       @content;
     }
   }
