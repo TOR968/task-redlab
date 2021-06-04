@@ -1,0 +1,13 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+$text-collor: #ffffff;
+$main-text-color: #000000;
+$decor-color: #ff6b09;
+$main-bg-color: #f5f6fb;
+$footer-bg-color: #02172a;
+
+.title-color {
+  color: var(--main-text-color);
+}
