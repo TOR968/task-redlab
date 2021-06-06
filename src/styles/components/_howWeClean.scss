@@ -1,0 +1,23 @@
+.how-clean {
+  margin-bottom: 142px;
+  & img {
+    margin: 0 auto;
+  }
+}
+
+.how-clean-text {
+  font-family: 'TTTravels-Regular';
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 52px;
+  & h2 {
+    font-size: 44px;
+    line-height: 120%;
+  }
+  & p {
+    font-size: 18px;
+    line-height: 140%;
+    width: 414px;
+    // height: 100px;
+  }
+}

@@ -3,11 +3,13 @@
   font-size: 24px;
   line-height: 130%;
   text-align: center;
+  // vertical-align: bottom;
 
   display: flex;
 
   margin-bottom: 149px;
   & li {
+    position: relative;
     height: 328px;
     width: 300px;
     background-color: #f3f6fb;
@@ -17,8 +19,10 @@
       margin-right: 40px;
     }
     & img {
-      //   margin-top: 25%;
-      margin: 0 auto;
+      position: absolute;
+      transform: translate(-50%, 0);
+      left: 50%;
+      bottom: 0;
     }
   }
 

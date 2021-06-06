@@ -1,6 +1,7 @@
 import Navigation from './components/Navigation';
 import OrderClean from './components/OrderClean';
 import Аdvantages from './components/Аdvantages';
+import HowWeClean from './components/HowWeClean';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navigation />
       <OrderClean />
       <Аdvantages />
+      <HowWeClean />
     </div>
   );
 }
