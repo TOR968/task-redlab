@@ -1,0 +1,28 @@
+.example {
+  display: flex;
+  & .menu {
+    background-color: $decor-color;
+    color: $text-color;
+    width: 375px;
+    & h3 {
+      font-family: 'TTTravels-Medium';
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 200px;
+      margin-top: 35px;
+      margin-left: 53px;
+    }
+    & .list-room {
+      font-family: 'TTTravels-Regular';
+      font-size: 44px;
+      line-height: 120%;
+      margin-left: 60px;
+    }
+    & li:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+  & .photo-room {
+    display: flex;
+  }
+}
