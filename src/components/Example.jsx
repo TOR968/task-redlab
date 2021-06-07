@@ -14,10 +14,10 @@ export default function Example() {
       </div>
 
       <ul className="photo-room">
-        <li>
+        <li className="kitchenBG">
           <img src={kitchenBG} alt="kitchen" />
         </li>
-        <li>
+        <li className="BG">
           <img src={BG} alt="bath" />
         </li>
       </ul>
