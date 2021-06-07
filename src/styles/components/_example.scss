@@ -49,11 +49,12 @@
   & .photo-room {
     display: flex;
   }
-  .kitchenBG {
-  }
+  // .kitchenBG {
+  // }
   .BG {
     display: inline-block;
     position: absolute;
+    z-index: 6;
     opacity: 0;
     width: 100%;
     height: 100%;
