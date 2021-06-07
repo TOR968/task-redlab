@@ -97,7 +97,7 @@ textarea {
 .container {
   min-height: 100%;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 30px;
 
   @include for-size(mobile) {
     max-width: 647px;
@@ -107,5 +107,6 @@ textarea {
   }
   @include for-size(desktop) {
     max-width: 1320px;
+    padding: 0 60px;
   }
 }
