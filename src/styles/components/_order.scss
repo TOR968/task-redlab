@@ -11,7 +11,7 @@
   & .title-text {
     display: inline-block;
     max-width: 400px;
-    margin-left: 50vw;
+    margin-left: 700px;
   }
   & h1 {
     height: 252px;
@@ -28,6 +28,7 @@
     top: -70px;
     left: -60px;
     z-index: -1;
+    max-width: 720px;
     width: 50vw;
   }
 }
