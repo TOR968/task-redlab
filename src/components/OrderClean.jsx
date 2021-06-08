@@ -10,16 +10,16 @@ export default function OrderClean() {
     const element = ref.current;
     gsap.to(element.querySelector('.order-btn'), {
       duration: 3,
-      // y: element.querySelector('.example'),
+      y: 1500,
       scale: 0.8,
       ease: 'none',
-      restart: true,
+      // restart: true,
       delay: 1,
       scrollTrigger: {
         trigger: element.querySelector('.order-btn'),
-        // markers: true,
+        markers: true,
         start: 'top center',
-        // end: element.querySelector('.example'), // end after scrolling 500px beyond the start
+        end: '+=500', // end after scrolling 500px beyond the start
       },
     });
   }, []);
