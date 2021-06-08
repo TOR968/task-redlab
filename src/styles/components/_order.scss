@@ -2,15 +2,16 @@
   position: relative;
   font-family: 'TTTravels-Regular';
   color: $main-text-color;
-  display: flex;
   align-items: center;
   margin-bottom: 73px;
+  height: 730px;
+  display: flex;
+  align-content: center;
 
-  //   justify-content: center;
   & .title-text {
-    // display: inline-block;
-    justify-content: center;
-    padding-left: 155px;
+    display: inline-block;
+    max-width: 400px;
+    margin-left: 50vw;
   }
   & h1 {
     height: 252px;
@@ -22,38 +23,51 @@
     font-size: 18px;
     line-height: 140%;
   }
-  & .order-btn {
-    font-family: 'TTTravels-Medium';
-    color: $text-color;
-    text-align: center;
-    font-size: 18px;
-    line-height: 130%;
-    text-transform: uppercase;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  & .backgraund-img {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    height: 195px;
-    width: 195px;
-    background: $decor-color;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-
-    animation: order-btn infinite 50s linear;
+    top: -70px;
+    left: -60px;
+    z-index: -1;
+    width: 50vw;
   }
 }
 
-@keyframes order-btn {
+@keyframes order-text {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
+}
+
+.order-text {
+  animation: order-text infinite 50s linear;
+}
+
+.order-btn {
+  font-family: 'TTTravels-Medium';
+  color: $text-color;
+  text-align: center;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 20;
+
+  height: 195px;
+  width: 195px;
+  background: $decor-color;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
