@@ -13,8 +13,8 @@ function App() {
         <OrderClean />
         <Аdvantages />
       </section>
-      <HowWeClean />
-      <Example />
+      {/* <HowWeClean />
+      <Example /> */}
     </div>
   );
 }
