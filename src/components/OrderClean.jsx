@@ -9,8 +9,8 @@ export default function OrderClean() {
   useEffect(() => {
     const element = ref.current;
     gsap.to(element.querySelector('.order-btn'), {
-      duration: 3,
-      // y: 1500,
+      duration: 1,
+      y: 120,
       scale: 0.8,
       ease: 'none',
       // restart: true,
