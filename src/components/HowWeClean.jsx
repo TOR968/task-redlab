@@ -12,7 +12,9 @@ export default function HowWeClean() {
             приступает к делу. Вам остаётся только оценить результат.
           </p>
         </div>
-
+        {/* <div className="kitchen">
+          <img className="kitchen-img" src={kitchen} alt="kitchen" />
+        </div> */}
         <img className="kitchen" src={kitchen} alt="kitchen" />
         {/* </section>
       <section className=""> */}
