@@ -99,6 +99,7 @@ textarea {
   margin: 0 auto;
   padding: 0 30px;
   border: 2px solid tomato;
+  overflow: hidden;
   @include for-size(mobile) {
     max-width: 647px;
   }
