@@ -19,7 +19,7 @@ export default function OrderClean() {
         trigger: element.querySelector('.order-btn'),
         markers: true,
         start: 'top center',
-        endTrigger: element.querySelector('.how-clean'),
+        // endTrigger: element.querySelector('.how-clean'),
 
         // end: '+=500', // end after scrolling 500px beyond the start
       },
