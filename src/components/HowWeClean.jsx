@@ -14,19 +14,20 @@ export default function HowWeClean() {
         </div>
 
         <img className="kitchen" src={kitchen} alt="kitchen" />
-      </section>
-      <section className="example">
-        <div className="menu">
-          <h3>Как мы убираем</h3>
-          <ul className="list-room">
-            <li>Кухня</li>
-            <li>Комнаты</li>
-            <li>Ванная</li>
-            <li>Прихожая</li>
-          </ul>
-        </div>
+        {/* </section>
+      <section className=""> */}
+        <div className="example">
+          <div className="menu">
+            <h3>Как мы убираем</h3>
+            <ul className="list-room">
+              <li>Кухня</li>
+              <li>Комнаты</li>
+              <li>Ванная</li>
+              <li>Прихожая</li>
+            </ul>
+          </div>
 
-        {/* <ul className="photo-room">
+          {/* <ul className="photo-room">
           <li className="kitchenBG">
             <img src={kitchenBG} alt="kitchen" />
           </li>
@@ -34,6 +35,7 @@ export default function HowWeClean() {
             <img src={BG} alt="bath" />
           </li>
         </ul> */}
+        </div>
       </section>
     </>
   );
