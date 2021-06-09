@@ -13,15 +13,12 @@ export default function OrderClean() {
       y: 120,
       scale: 0.8,
       ease: 'none',
-      // restart: true,
       delay: 1,
       scrollTrigger: {
+        toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.order-btn'),
         markers: true,
         start: 'top center',
-        // endTrigger: element.querySelector('.how-clean'),
-
-        // end: '+=500', // end after scrolling 500px beyond the start
       },
     });
   }, []);
