@@ -98,7 +98,7 @@ textarea {
   min-height: 100%;
   margin: 0 auto;
   padding: 0 30px;
-
+  border: 2px solid tomato;
   @include for-size(mobile) {
     max-width: 647px;
   }
