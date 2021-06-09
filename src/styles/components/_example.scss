@@ -1,6 +1,13 @@
 .example {
+  position: fixed;
+  // position: absolute;
+  bottom: 0;
+  left: 0;
+  // left: -375px;
+  z-index: 10;
+  height: 100vh;
+
   display: flex;
-  // overflow-y: hidden;
   & .menu {
     background-color: $decor-color;
     color: $text-color;
