@@ -10,7 +10,7 @@ export default function HowWeClean() {
         </p>
       </div>
 
-      <img src={kitchen} alt="kitchen" />
+      <img className="kitchen" src={kitchen} alt="kitchen" />
     </section>
   );
 }
