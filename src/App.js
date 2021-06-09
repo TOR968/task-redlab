@@ -39,17 +39,6 @@ function App() {
         start: 'top top',
       },
     });
-    // gsap.from(element.querySelector('.advantages :nth-child()'), {
-    //   duration: 1,
-    //   ease: 'fade-up',
-    //   delay: 1,
-    //   scrollTrigger: {
-    //     toggleActions: 'restart none reverse none',
-    //     trigger: element.querySelector('.advantages :nth-child()'),
-    //     markers: true,
-    //     start: 'top center',
-    //   },
-    // });
   }, []);
   return (
     <div className="container" ref={ref}>
@@ -59,7 +48,7 @@ function App() {
         <Аdvantages />
       </section>
       <HowWeClean />
-      <Example />
+      {/* <Example /> */}
     </div>
   );
 }
