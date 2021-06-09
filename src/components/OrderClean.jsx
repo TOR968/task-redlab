@@ -1,29 +1,7 @@
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import title from '../photo/title-bg.jpg';
 export default function OrderClean() {
-  gsap.registerPlugin(ScrollTrigger);
-  const ref = useRef(null);
-  useEffect(() => {
-    const element = ref.current;
-    gsap.to(element.querySelector('.order-btn'), {
-      duration: 1,
-      y: 120,
-      scale: 0.8,
-      ease: 'none',
-      delay: 1,
-      scrollTrigger: {
-        toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.order-btn'),
-        markers: true,
-        start: 'top center',
-      },
-    });
-  }, []);
   return (
-    <div className="order" ref={ref}>
+    <div className="order">
       <img className="backgraund-img" src={title} alt="clean up" />
       <div className="title-text">
         <h1>Уборка квартир в Киеве </h1>
