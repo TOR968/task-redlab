@@ -10,7 +10,7 @@ export default function OrderClean() {
     const element = ref.current;
     gsap.to(element.querySelector('.order-btn'), {
       duration: 3,
-      y: 1500,
+      // y: 1500,
       scale: 0.8,
       ease: 'none',
       // restart: true,
@@ -19,7 +19,9 @@ export default function OrderClean() {
         trigger: element.querySelector('.order-btn'),
         markers: true,
         start: 'top center',
-        end: '+=500', // end after scrolling 500px beyond the start
+        endTrigger: element.querySelector('.how-clean'),
+
+        // end: '+=500', // end after scrolling 500px beyond the start
       },
     });
   }, []);
