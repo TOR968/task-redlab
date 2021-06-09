@@ -16,27 +16,16 @@ function App() {
     const element = ref.current;
     gsap.to(element.querySelector('.order-btn'), {
       duration: 1,
-      y: 120,
-      scale: 0.8,
-      ease: 'none',
-      // delay: 1,
-      scrollTrigger: {
-        toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.order-btn'),
-        // markers: true,
-        start: 'top center',
-      },
-    });
-    gsap.to(element.querySelector('.order-btn'), {
-      duration: 1,
+      y: 100,
       scale: 0.0,
       ease: 'none',
-      // delay: 1,
+      delay: 1,
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.kitchen'),
-        // markers: true,
-        start: 'top top',
+        markers: true,
+        start: 'top 20px',
+        end: 'bottom 20px',
       },
     });
   }, []);
