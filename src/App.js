@@ -14,6 +14,8 @@ function App() {
   const ref = useRef(null);
   useEffect(() => {
     const element = ref.current;
+
+    // кнопка замовлення
     gsap.to(element.querySelector('.order-btn'), {
       duration: 1,
       y: 100,
@@ -26,6 +28,38 @@ function App() {
         // markers: true,
         start: 'top 20px',
         end: '15px 20px',
+      },
+    });
+
+    // тексттова частина
+    gsap.to(element.querySelector('.how-clean-text'), {
+      duration: 1,
+      y: -120,
+      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
+      opacity: 0,
+      scrollTrigger: {
+        toggleActions: 'restart none reverse none',
+        trigger: element.querySelector('.kitchen'),
+        // markers: true,
+        start: '50px center',
+        end: '50px center',
+      },
+    });
+
+    //бокове меню
+    gsap.to(element.querySelector('.menu'), {
+      duration: 1,
+      // left: 375,
+      x: 375,
+      // transform:
+      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
+      // opacity: 0,
+      scrollTrigger: {
+        toggleActions: 'restart none reverse none',
+        trigger: element.querySelector('.kitchen'),
+        markers: true,
+        // start: '50px center',
+        // end: '50px center',
       },
     });
   }, []);
