@@ -6,7 +6,6 @@ import Navigation from './components/Navigation';
 import OrderClean from './components/OrderClean';
 import Аdvantages from './components/Аdvantages';
 import HowWeClean from './components/HowWeClean';
-// import Example from './components/Example';
 import 'aos/dist/aos.css';
 
 function App() {
@@ -26,8 +25,8 @@ function App() {
         toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.kitchen'),
         // markers: true,
-        start: 'top 20px',
-        end: '15px 20px',
+        start: 'top center',
+        end: '15px center',
       },
     });
 
@@ -58,8 +57,8 @@ function App() {
         toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.kitchen'),
         markers: true,
-        // start: '50px center',
-        // end: '50px center',
+        start: '50px center',
+        end: '50px center',
       },
     });
   }, []);
@@ -71,7 +70,6 @@ function App() {
         <Аdvantages />
       </section>
       <HowWeClean />
-      {/* <Example /> */}
     </div>
   );
 }
