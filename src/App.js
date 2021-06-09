@@ -6,7 +6,7 @@ import Navigation from './components/Navigation';
 import OrderClean from './components/OrderClean';
 import Аdvantages from './components/Аdvantages';
 import HowWeClean from './components/HowWeClean';
-import Example from './components/Example';
+// import Example from './components/Example';
 import 'aos/dist/aos.css';
 
 function App() {
@@ -23,9 +23,9 @@ function App() {
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.kitchen'),
-        markers: true,
+        // markers: true,
         start: 'top 20px',
-        end: 'bottom 20px',
+        end: '15px 20px',
       },
     });
   }, []);
