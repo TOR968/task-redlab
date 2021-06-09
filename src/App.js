@@ -58,20 +58,21 @@ function App() {
         end: '50px center',
       },
     });
-    //
 
-    gsap.from(element.querySelector('.example'), {
-      duration: 1,
-      xPercent: -100,
-      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
-      scrollTrigger: {
-        toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.kitchen'),
-        markers: true,
-        start: '50px center',
-        end: '50px center',
-      },
-    });
+    // рух фото
+
+    // gsap.from(element.querySelector('.kitchen'), {
+    //   duration: 1,
+    //   xPercent: -100,
+    //   ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
+    //   scrollTrigger: {
+    //     toggleActions: 'restart none reverse none',
+    //     trigger: element.querySelector('.kitchen'),
+    //     markers: true,
+    //     start: '50px center',
+    //     end: '50px center',
+    //   },
+    // });
   }, []);
   return (
     <div className="container" ref={ref}>
