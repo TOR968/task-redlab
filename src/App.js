@@ -46,13 +46,24 @@ function App() {
     });
 
     //бокове меню
-    gsap.to(element.querySelector('.menu'), {
+    gsap.from(element.querySelector('.example'), {
       duration: 1,
-      // left: 375,
-      x: 375,
-      // transform:
+      xPercent: -100,
       ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
-      // opacity: 0,
+      scrollTrigger: {
+        toggleActions: 'restart none reverse none',
+        trigger: element.querySelector('.kitchen'),
+        markers: true,
+        start: '50px center',
+        end: '50px center',
+      },
+    });
+    //
+
+    gsap.from(element.querySelector('.example'), {
+      duration: 1,
+      xPercent: -100,
+      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
         trigger: element.querySelector('.kitchen'),
