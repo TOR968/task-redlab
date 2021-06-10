@@ -23,10 +23,10 @@ function App() {
       delay: 1,
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.kitchen'),
+        trigger: element.querySelector('.how-clean'),
         // markers: true,
-        start: 'top center',
-        end: '15px center',
+        start: '70% 90%',
+        end: '70% 90%',
       },
     });
 
@@ -38,10 +38,10 @@ function App() {
       opacity: 0,
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.kitchen'),
+        trigger: element.querySelector('.how-clean'),
         // markers: true,
-        start: '50px center',
-        end: '50px center',
+        start: '70% 90%',
+        end: '70% 90%',
       },
     });
 
@@ -52,27 +52,28 @@ function App() {
       ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.kitchen'),
-        markers: true,
-        start: '50px center',
-        end: '50px center',
+        trigger: element.querySelector('.how-clean'),
+        // markers: true,
+        start: '70% 90%',
+        end: '70% 90%',
       },
     });
 
     // рух фото
 
-    // gsap.from(element.querySelector('.kitchen'), {
-    //   duration: 1,
-    //   xPercent: -100,
-    //   ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
-    //   scrollTrigger: {
-    //     toggleActions: 'restart none reverse none',
-    //     trigger: element.querySelector('.kitchen'),
-    //     markers: true,
-    //     start: '50px center',
-    //     end: '50px center',
-    //   },
-    // });
+    gsap.to(element.querySelector('.kitchen'), {
+      duration: 1,
+      x: 150,
+      y: -150,
+      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
+      scrollTrigger: {
+        toggleActions: 'restart none reverse none',
+        trigger: element.querySelector('.how-clean'),
+        // markers: true,
+        start: '70% 90%',
+        end: '70% 90%',
+      },
+    });
   }, []);
   return (
     <div className="container" ref={ref}>
