@@ -1,14 +1,11 @@
 .how-clean {
-  // margin-bottom: 142px;
   max-height: 800px;
   position: relative;
   & img {
     margin: 0 auto;
   }
-  & .kitchen {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+  & .kitchen-box {
+    position: relative;
   }
 }
 
@@ -41,7 +38,6 @@
     color: $text-color;
     width: 375px;
     & h3 {
-      // position: relative;
       z-index: 1;
       font-family: 'TTTravels-Medium';
       font-size: 16px;
@@ -82,9 +78,6 @@
       }
     }
   }
-  & .photo-room {
-    display: flex;
-  }
   // .kitchenBG {
   // }
   // .BG {
@@ -100,4 +93,70 @@
   //   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   //   // opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   // }
+}
+
+.circle {
+  &-1 {
+    @extend %circle-form;
+    top: 250px;
+    left: 390px;
+  }
+  &-2 {
+    @extend %circle-form;
+    top: 377px;
+    left: 680px;
+  }
+  &-3 {
+    @extend %circle-form;
+    top: 435px;
+    left: 300px;
+  }
+  &-4 {
+    @extend %circle-form;
+    top: 465px;
+    left: 510px;
+  }
+  &-5 {
+    @extend %circle-form;
+    top: 487px;
+    left: 870px;
+  }
+  &-6 {
+    @extend %circle-form;
+    top: 576px;
+    left: 630px;
+  }
+  &-7 {
+    @extend %circle-form;
+    top: 704px;
+    left: 340px;
+  }
+}
+
+%circle-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  z-index: 30;
+  width: 49px;
+  height: 49px;
+  border-radius: 40px;
+  &:focus,
+  &:hover {
+    background-color: rgba(90, 48, 240, 0.2);
+  }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.circle-plus {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: $decor-color;
+  border-radius: 40px;
 }
