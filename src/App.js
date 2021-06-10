@@ -61,10 +61,27 @@ function App() {
 
     // рух фото
 
-    gsap.to(element.querySelector('.kitchen'), {
+    gsap.to(element.querySelector('.kitchen-box'), {
       duration: 1,
       x: 150,
       y: -150,
+      ease: ' power1. out out',
+      scrollTrigger: {
+        toggleActions: 'restart none reverse none',
+        trigger: element.querySelector('.how-clean'),
+        // markers: true,
+        start: '70% 90%',
+        end: '70% 90%',
+      },
+    });
+
+    // поява маркерів
+
+    gsap.from(element.querySelectorAll('.circle'), {
+      duration: 2,
+      opacity: 0,
+      // xPercent: -100,
+      diley: 1,
       ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
