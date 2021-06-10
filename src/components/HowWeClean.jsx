@@ -1,5 +1,5 @@
-import kitchen from '../photo/kitchen.jpg';
-// import kitchenBG from '../photo/kitchenBG.jpg';
+// import kitchen from '../photo/kitchen.jpg';
+import kitchenBG from '../photo/kitchenBG.jpg';
 // import BG from '../photo/BG.jpg';
 export default function HowWeClean() {
   return (
@@ -15,7 +15,7 @@ export default function HowWeClean() {
         {/* <div className="kitchen">
           <img className="kitchen-img" src={kitchen} alt="kitchen" />
         </div> */}
-        <img className="kitchen" src={kitchen} alt="kitchen" />
+        <img className="kitchen" src={kitchenBG} alt="kitchen" />
         {/* </section>
       <section className=""> */}
         <div className="example">
