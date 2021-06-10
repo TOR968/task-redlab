@@ -80,8 +80,7 @@ function App() {
     gsap.from(element.querySelectorAll('.circle'), {
       duration: 2,
       opacity: 0,
-      // xPercent: -100,
-      diley: 1,
+      delay: 0.5,
       ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
       scrollTrigger: {
         toggleActions: 'restart none reverse none',
