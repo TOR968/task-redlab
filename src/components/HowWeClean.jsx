@@ -1,6 +1,6 @@
-// import kitchen from '../photo/kitchen.jpg';
 import kitchenBG from '../photo/kitchenBG.jpg';
 // import BG from '../photo/BG.jpg';
+import plus from '../photo/Plus.svg';
 export default function HowWeClean() {
   return (
     <>
@@ -12,12 +12,44 @@ export default function HowWeClean() {
             приступает к делу. Вам остаётся только оценить результат.
           </p>
         </div>
-        {/* <div className="kitchen">
-          <img className="kitchen-img" src={kitchen} alt="kitchen" />
-        </div> */}
-        <img className="kitchen" src={kitchenBG} alt="kitchen" />
-        {/* </section>
-      <section className=""> */}
+        <div className="kitchen-box">
+          <img className="kitchen" src={kitchenBG} alt="kitchen" />
+          <div className="circle-1 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-2 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-3 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-4 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-5 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-6 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+          <div className="circle-7 circle">
+            <div className="circle-plus">
+              <img src={plus} alt="plus" />
+            </div>
+          </div>
+        </div>
         <div className="example">
           <div className="menu">
             <h3>Как мы убираем</h3>
@@ -28,15 +60,6 @@ export default function HowWeClean() {
               <li>Прихожая</li>
             </ul>
           </div>
-
-          {/* <ul className="photo-room">
-          <li className="kitchenBG">
-            <img src={kitchenBG} alt="kitchen" />
-          </li>
-          <li className="BG">
-            <img src={BG} alt="bath" />
-          </li>
-        </ul> */}
         </div>
       </section>
     </>
