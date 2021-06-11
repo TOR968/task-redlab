@@ -9,9 +9,6 @@
   & .menu-btn {
     cursor: pointer;
     position: relative;
-    @include for-size(desktop) {
-      display: none;
-    }
   }
   & .nav-menu {
     @include for-size(mobile) {
