@@ -3,7 +3,14 @@
   font-size: 24px;
   line-height: 130%;
   text-align: center;
-  display: flex;
+
+  @include for-size(mobile) {
+  }
+  @include for-size(tablet) {
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
 
   margin-bottom: 149px;
   & li {

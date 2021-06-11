@@ -2,19 +2,70 @@
   font-family: 'TTTravels-Medium';
   font-size: 14px;
   line-height: 110%;
-
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: 70px;
-  // box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+  justify-content: space-between;
+  & .menu-btn {
+    cursor: pointer;
+    position: relative;
+    @include for-size(desktop) {
+      display: none;
+    }
+  }
+  & .nav-menu {
+    @include for-size(mobile) {
+      position: absolute;
+      z-index: 99;
+      top: 70px;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $main-bg-color;
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate(100%);
+    }
+    @include for-size(tablet) {
+      position: absolute;
+      z-index: 99;
+      top: 70px;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $main-bg-color;
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate(100%);
+    }
+    @include for-size(desktop) {
+      display: flex;
+      align-items: center;
+    }
+    &.active {
+      transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate(0);
+    }
+  }
+
   & .togleClean {
     display: flex;
     align-items: center;
     height: 37px;
     border: 1px solid #e2e8f0;
     border-radius: 48px;
+    width: 130px;
     background-color: $main-bg-color;
+
+    @include for-size(mobile) {
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    @include for-size(tablet) {
+      margin: 0 auto;
+    }
+    @include for-size(desktop) {
+      margin-right: 80px;
+    }
+
     & .home {
       background: $decor-color;
       border-radius: 34px;
@@ -27,9 +78,43 @@
     }
   }
   & ul {
-    display: flex;
-    & li:not(:last-child) {
-      margin-right: 32px;
+    @include for-size(desktop) {
+      display: flex;
+      margin-right: 50px;
+    }
+    & li {
+      @include for-size(mobile) {
+        text-align: center;
+        margin-top: 20px;
+      }
+      @include for-size(tablet) {
+        text-align: center;
+        margin-top: 20px;
+      }
+      @include for-size(desktop) {
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+  & .info {
+    @include for-size(mobile) {
+      text-align: center;
+      margin-top: 20px;
+    }
+    @include for-size(tablet) {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  & .phone {
+    font-family: 'TTTravels-Medium';
+    font-size: 14px;
+    line-height: 110%;
+    &::after {
+      content: ' | ';
     }
   }
 }
