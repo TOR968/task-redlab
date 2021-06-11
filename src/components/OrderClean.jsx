@@ -1,7 +1,7 @@
 import title from '../photo/title-bg.jpg';
 export default function OrderClean() {
   return (
-    <div className="order">
+    <div className="order container">
       <img className="backgraund-img" src={title} alt="clean up" />
       <div className="title-text">
         <h1>Уборка квартир в Киеве </h1>

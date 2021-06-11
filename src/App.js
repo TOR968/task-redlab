@@ -30,20 +30,22 @@ function App() {
       },
     });
 
-    // тексттова частина
-    gsap.to(element.querySelector('.how-clean-text'), {
-      duration: 1,
-      y: -120,
-      ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
-      opacity: 0,
-      scrollTrigger: {
-        toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.how-clean'),
-        // markers: true,
-        start: '70% 90%',
-        end: '70% 90%',
-      },
-    });
+    // текстова частина
+    if (window.innerWidth > 767) {
+      gsap.to(element.querySelector('.how-clean-text'), {
+        duration: 1,
+        y: -120,
+        ease: ' slow( 0.7 0.7, 0.7 0.7, false)',
+        opacity: 0,
+        scrollTrigger: {
+          toggleActions: 'restart none reverse none',
+          trigger: element.querySelector('.how-clean'),
+          // markers: true,
+          start: '70% 90%',
+          end: '70% 90%',
+        },
+      });
+    }
 
     //бокове меню
     gsap.from(element.querySelector('.example'), {
@@ -61,19 +63,21 @@ function App() {
 
     // рух фото
 
-    gsap.to(element.querySelector('.kitchen-box'), {
-      duration: 1,
-      x: 150,
-      y: -150,
-      ease: ' power1. out out',
-      scrollTrigger: {
-        toggleActions: 'restart none reverse none',
-        trigger: element.querySelector('.how-clean'),
-        // markers: true,
-        start: '70% 90%',
-        end: '70% 90%',
-      },
-    });
+    if (window.innerWidth > 767) {
+      gsap.to(element.querySelector('.kitchen-box'), {
+        duration: 1,
+        x: 150,
+        y: -150,
+        ease: ' power1. out out',
+        scrollTrigger: {
+          toggleActions: 'restart none reverse none',
+          trigger: element.querySelector('.how-clean'),
+          // markers: true,
+          start: '70% 90%',
+          end: '70% 90%',
+        },
+      });
+    }
 
     // поява маркерів
 
@@ -92,7 +96,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="container" ref={ref}>
+    <div ref={ref}>
       <Navigation />
       <section>
         <OrderClean />

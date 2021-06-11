@@ -3,11 +3,6 @@
   font-size: 24px;
   line-height: 130%;
   text-align: center;
-
-  @include for-size(mobile) {
-  }
-  @include for-size(tablet) {
-  }
   @include for-size(desktop) {
     display: flex;
   }
@@ -22,6 +17,16 @@
     border-radius: 8px;
     display: block;
     cursor: pointer;
+
+    @include for-size(mobile) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include for-size(tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &:hover .card-text,
     &:hover ::before,
     &:focus .card-text,
@@ -38,7 +43,16 @@
     }
 
     &:not(:last-child) {
-      margin-right: 40px;
+      @include for-size(mobile) {
+        margin-bottom: 20px;
+      }
+      @include for-size(tablet) {
+        margin-bottom: 20px;
+      }
+
+      @include for-size(desktop) {
+        margin-right: 40px;
+      }
     }
     & img {
       position: absolute;

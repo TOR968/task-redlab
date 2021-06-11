@@ -15,7 +15,7 @@ export default function HowWeClean() {
 
   return (
     <>
-      <section className="how-clean">
+      <section className="how-clean container">
         <div className="how-clean-text">
           <h2>Как мы убираем</h2>
           <p>
@@ -31,10 +31,10 @@ export default function HowWeClean() {
             style={
               !cross1
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross1(!cross1)}
@@ -55,10 +55,10 @@ export default function HowWeClean() {
             style={
               !cross2
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross2(!cross2)}
@@ -79,10 +79,10 @@ export default function HowWeClean() {
             style={
               !cross3
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross3(!cross3)}
@@ -103,10 +103,10 @@ export default function HowWeClean() {
             style={
               !cross4
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross4(!cross4)}
@@ -127,10 +127,10 @@ export default function HowWeClean() {
             style={
               !cross5
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross5(!cross5)}
@@ -151,10 +151,10 @@ export default function HowWeClean() {
             style={
               !cross6
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross6(!cross6)}
@@ -175,10 +175,10 @@ export default function HowWeClean() {
             style={
               !cross7
                 ? {
-                    'background-color': 'rgba(90, 48, 240, 0.2)',
+                    backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
                 : {
-                    'background-color': 'rgba(90, 48, 240, 0)',
+                    backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
             onClick={() => setCross7(!cross7)}

@@ -12,7 +12,7 @@ export default function Аdvantages() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <ul className="advantages">
+    <ul className="advantages container">
       <li data-aos="fade-up" data-aos-delay="50">
         <h3>Тщательно отобранный персонал</h3>
         <p className="card-text">

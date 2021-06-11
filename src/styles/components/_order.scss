@@ -2,34 +2,56 @@
   position: relative;
   font-family: 'TTTravels-Regular';
   color: $main-text-color;
-  align-items: center;
-  margin-bottom: 73px;
-  height: 730px;
-  display: flex;
-  align-content: center;
 
+  margin-bottom: 73px;
+
+  @include for-size(desktop) {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 730px;
+  }
+  @include for-size(mobile) {
+    height: 400px;
+  }
+  @include for-size(tablet) {
+    height: 650px;
+  }
+
+  & .backgraund-img {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: -1;
+    max-width: 720px;
+    width: 100%;
+    @include for-size(desktop) {
+      width: 50vw;
+    }
+  }
   & .title-text {
-    display: inline-block;
     max-width: 400px;
-    margin-left: 700px;
+    @include for-size(desktop) {
+      margin-left: 70%;
+    }
   }
   & h1 {
     height: 252px;
     font-size: 76px;
     line-height: 110%;
     margin-bottom: 30px;
+    @include for-size(mobile) {
+      margin-top: 30px;
+      font-size: 65px;
+    }
+    @include for-size(tablet) {
+      margin-top: 30px;
+      font-size: 74px;
+    }
   }
   & p {
     font-size: 18px;
     line-height: 140%;
-  }
-  & .backgraund-img {
-    position: absolute;
-    top: -70px;
-    left: -60px;
-    z-index: -1;
-    max-width: 720px;
-    width: 50vw;
   }
 }
 

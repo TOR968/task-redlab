@@ -5,7 +5,7 @@ import menu from '../photo/menu.svg';
 export default function Navigation() {
   const [menuActive, setMenuActive] = useState(false);
   return (
-    <header className="nav ">
+    <header className="nav container">
       <img src={logo} className="logo" alt="logo" />
       <nav className={menuActive ? 'nav-menu active' : 'nav-menu'}>
         <div className="togleClean">
