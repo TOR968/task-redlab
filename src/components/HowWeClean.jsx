@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { gsap } from 'gsap';
 
 import kitchenBG from '../photo/kitchenBG.jpg';
@@ -14,29 +14,60 @@ export default function HowWeClean() {
   const [cross6, setCross6] = useState(false);
   const [cross7, setCross7] = useState(false);
 
-  const [bathroomBtn, setBathroomBtn] = useState(false);
-  const [kitchenBtn, setKitchenBtn] = useState(true);
+  const [cross21, setCross21] = useState(false);
+  const [cross22, setCross22] = useState(false);
+  const [cross23, setCross23] = useState(false);
+  const [cross24, setCross24] = useState(false);
+  const [cross25, setCross25] = useState(false);
 
+  const [menuBtn, setMenuBtn] = useState({
+    activeObjects: null,
+    objects: [
+      { id: 1, text: 'Кухня' },
+      { id: 2, text: 'Комнаты' },
+      { id: 3, text: 'Ванная' },
+      { id: 4, text: 'Прихожая' },
+    ],
+  });
+
+  function toggleActive(index) {
+    setMenuBtn({ ...menuBtn, activeObjects: menuBtn.objects[index] });
+  }
+
+  function toggleActiveStyles(index) {
+    if (menuBtn.objects[index] === menuBtn.activeObjects) {
+      return 'active';
+    } else {
+      return 'inactive';
+    }
+  }
   const ref = useRef(null);
-  useEffect(() => {
+
+  // const element = ref.current;
+
+  // menuBtn.objects.map(el => el.id);
+
+  // перемиканя фото
+  function animation(id) {
+    // useEffect() => {
     const element = ref.current;
-    // перемиканя фото
-    if (!kitchenBtn) {
+    if (id === 1) {
       gsap.from(element.querySelector('.kitchen-box'), {
         duration: 1,
         xPercent: 100,
+        zIndex: 6,
         ease: ' power1. out out',
       });
-    }
-
-    if (bathroomBtn) {
+    } else if (id === 3) {
       gsap.from(element.querySelector('.bathroom-box'), {
         duration: 1,
         xPercent: 100,
+        zIndex: 5,
         ease: ' power1. out out',
       });
     }
-  }, [bathroomBtn, kitchenBtn]);
+    // }, []);
+  }
 
   return (
     <>
@@ -48,7 +79,8 @@ export default function HowWeClean() {
             приступает к делу. Вам остаётся только оценить результат.
           </p>
         </div>
-        <div className="kitchen-box">
+
+        <div className="kitchen-box box ">
           <img className="kitchen" src={kitchenBG} alt="kitchen" />
 
           <div
@@ -220,13 +252,13 @@ export default function HowWeClean() {
             </div>
           </div>
         </div>
-        <div className="bathroom-box">
-          <img className="bathroom" src={BG} alt="bathroom" />
 
+        <div className="bathroom-box box">
+          <img className="bathroom" src={BG} alt="bathroom" />
           <div
-            className="circle-1 circle"
+            className="circle2-1 circle"
             style={
-              !cross1
+              !cross21
                 ? {
                     backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
@@ -234,13 +266,13 @@ export default function HowWeClean() {
                     backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
-            onClick={() => setCross1(!cross1)}
+            onClick={() => setCross21(!cross21)}
           >
-            <div className={cross1 ? 'circle-baner' : 'off'}>
-              <span>Чистим фасад вытяжки</span>
+            <div className={cross21 ? 'circle-baner' : 'off'}>
+              <span>Моем зеркала</span>
             </div>
             <div className="circle-plus">
-              {!cross1 ? (
+              {!cross21 ? (
                 <img src={plus} alt="plus" />
               ) : (
                 <img src={crossImg} alt="cross" />
@@ -248,9 +280,9 @@ export default function HowWeClean() {
             </div>
           </div>
           <div
-            className="circle-2 circle"
+            className="circle2-2 circle"
             style={
-              !cross2
+              !cross22
                 ? {
                     backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
@@ -258,13 +290,13 @@ export default function HowWeClean() {
                     backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
-            onClick={() => setCross2(!cross2)}
+            onClick={() => setCross22(!cross22)}
           >
-            <div className={cross2 ? 'circle-baner' : 'off'}>
-              <span>Моем фасады кухонных гарнитуров</span>
+            <div className={cross22 ? 'circle-baner' : 'off'}>
+              <span>Моем плитку</span>
             </div>
             <div className="circle-plus">
-              {!cross2 ? (
+              {!cross22 ? (
                 <img src={plus} alt="plus" />
               ) : (
                 <img src={crossImg} alt="cross" />
@@ -272,9 +304,9 @@ export default function HowWeClean() {
             </div>
           </div>
           <div
-            className="circle-3 circle"
+            className="circle2-3 circle"
             style={
-              !cross3
+              !cross23
                 ? {
                     backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
@@ -282,13 +314,13 @@ export default function HowWeClean() {
                     backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
-            onClick={() => setCross3(!cross3)}
+            onClick={() => setCross23(!cross23)}
           >
-            <div className={cross3 ? 'circle-baner' : 'off'}>
-              <span>Чистим плиту</span>
+            <div className={cross23 ? 'circle-baner' : 'off'}>
+              <span>Моем ванну</span>
             </div>
             <div className="circle-plus">
-              {!cross3 ? (
+              {!cross23 ? (
                 <img src={plus} alt="plus" />
               ) : (
                 <img src={crossImg} alt="cross" />
@@ -296,9 +328,9 @@ export default function HowWeClean() {
             </div>
           </div>
           <div
-            className="circle-4 circle"
+            className="circle2-4 circle"
             style={
-              !cross4
+              !cross24
                 ? {
                     backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
@@ -306,13 +338,13 @@ export default function HowWeClean() {
                     backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
-            onClick={() => setCross4(!cross4)}
+            onClick={() => setCross24(!cross24)}
           >
-            <div className={cross4 ? 'circle-baner' : 'off'}>
-              <span>Виносим мусор</span>
+            <div className={cross24 ? 'circle-baner' : 'off'}>
+              <span>Моем раковину</span>
             </div>
             <div className="circle-plus">
-              {!cross4 ? (
+              {!cross24 ? (
                 <img src={plus} alt="plus" />
               ) : (
                 <img src={crossImg} alt="cross" />
@@ -320,9 +352,9 @@ export default function HowWeClean() {
             </div>
           </div>
           <div
-            className="circle-5 circle"
+            className="circle2-5 circle"
             style={
-              !cross5
+              !cross25
                 ? {
                     backgroundColor: 'rgba(90, 48, 240, 0.2)',
                   }
@@ -330,13 +362,13 @@ export default function HowWeClean() {
                     backgroundColor: 'rgba(90, 48, 240, 0)',
                   }
             }
-            onClick={() => setCross5(!cross5)}
+            onClick={() => setCross25(!cross25)}
           >
-            <div className={cross5 ? 'circle-baner' : 'off'}>
-              <span>Моем посуду</span>
+            <div className={cross25 ? 'circle-baner' : 'off'}>
+              <span>Моем унитаз</span>
             </div>
             <div className="circle-plus">
-              {!cross5 ? (
+              {!cross25 ? (
                 <img src={plus} alt="plus" />
               ) : (
                 <img src={crossImg} alt="cross" />
@@ -344,14 +376,23 @@ export default function HowWeClean() {
             </div>
           </div>
         </div>
+
         <div className="example">
           <div className="menu">
             <h3>Как мы убираем</h3>
-            <ul className="list-room">
-              <li onClick={() => setKitchenBtn(!kitchenBtn)}>Кухня</li>
-              <li>Комнаты</li>
-              <li onClick={() => setBathroomBtn(!bathroomBtn)}>Ванная</li>
-              <li>Прихожая</li>
+            <ul className="list-room" id="list-room">
+              {menuBtn.objects.map((element, index) => (
+                <li
+                  key={element.id}
+                  className={toggleActiveStyles(index)}
+                  onClick={() => {
+                    toggleActive(index);
+                    animation(element.id);
+                  }}
+                >
+                  {element.text}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

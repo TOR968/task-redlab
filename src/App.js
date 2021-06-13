@@ -31,7 +31,7 @@ function App() {
     });
 
     // текстова частина
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 768) {
       gsap.to(element.querySelector('.how-clean-text'), {
         duration: 1,
         y: -120,
@@ -63,8 +63,8 @@ function App() {
 
     // рух фото
 
-    if (window.innerWidth > 767) {
-      gsap.to(element.querySelector('.kitchen-box'), {
+    if (window.innerWidth > 768) {
+      gsap.to(element.querySelectorAll('.box'), {
         duration: 1,
         x: 150,
         y: -150,

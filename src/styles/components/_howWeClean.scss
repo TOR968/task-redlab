@@ -1,14 +1,44 @@
 .how-clean {
-  max-height: 800px;
   position: relative;
   overflow: hidden;
+  @include for-size(desktop) {
+    height: 800px;
+  }
   & img {
     margin: 0 auto;
   }
-  & .kitchen-box,
+  & .kitchen-box {
+    z-index: 2;
+    position: relative;
+    @include for-size(mobile) {
+      margin-bottom: 20px;
+    }
+    @include for-size(tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
   & .bathroom-box {
     position: relative;
+    z-index: 1;
+    @include for-size(mobile) {
+      margin-bottom: 20px;
+    }
+    @include for-size(tablet) {
+      margin-bottom: 20px;
+    }
   }
+  & .kitchen {
+    @extend %photo;
+  }
+  & .bathroom {
+    @extend %photo;
+  }
+}
+%photo {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .how-clean-text {
@@ -74,23 +104,29 @@
       margin-top: 35px;
       margin-left: 70px;
     }
+
     & .list-room {
       font-family: 'TTTravels-Regular';
       font-size: 44px;
       line-height: 120%;
       margin-left: 60px;
-    }
-    & li {
-      cursor: pointer;
-      display: flex;
-      &:hover,
-      &:focus {
+      & .active {
         font-style: italic;
         &::before {
           opacity: 1;
           transform: translateX(0);
         }
       }
+    }
+    & li {
+      cursor: pointer;
+      display: flex;
+
+      &:hover,
+      &:focus {
+        font-style: italic;
+      }
+
       &::before {
         content: '→ ';
         display: inline-block;
@@ -144,6 +180,34 @@
     @extend %circle-form;
     top: 704px;
     left: 340px;
+  }
+}
+
+.circle2 {
+  &-1 {
+    @extend %circle-form;
+    top: 250px;
+    left: 300px;
+  }
+  &-2 {
+    @extend %circle-form;
+    top: 377px;
+    left: 700px;
+  }
+  &-3 {
+    @extend %circle-form;
+    top: 620px;
+    left: 850px;
+  }
+  &-4 {
+    @extend %circle-form;
+    top: 700px;
+    left: 400px;
+  }
+  &-5 {
+    @extend %circle-form;
+    top: 710px;
+    left: 680px;
   }
 }
 
