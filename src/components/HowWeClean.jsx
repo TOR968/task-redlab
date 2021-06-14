@@ -75,11 +75,7 @@ export default function HowWeClean() {
 
   return (
     <>
-      <section
-        className="how-clean container"
-        ref={ref}
-        // style={{ zIndex: '5' }}
-      >
+      <section className="how-clean container" ref={ref}>
         <div className="how-clean-text">
           <h2>Как мы убираем</h2>
           <p>

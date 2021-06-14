@@ -35,10 +35,12 @@
   }
 }
 %photo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
+  @include for-size(desktop) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
 }
 
 .how-clean-text {

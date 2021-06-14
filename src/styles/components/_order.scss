@@ -20,12 +20,18 @@
 
   & .backgraund-img {
     position: absolute;
-    top: -70px;
     left: 0;
     z-index: -1;
     max-width: 720px;
     width: 100%;
+    @include for-size(mobile) {
+      top: 0;
+    }
+    @include for-size(tablet) {
+      top: 0;
+    }
     @include for-size(desktop) {
+      top: -70px;
       width: 50vw;
     }
   }
