@@ -43,35 +43,43 @@ export default function HowWeClean() {
   }
   const ref = useRef(null);
 
-  // const element = ref.current;
-
-  // menuBtn.objects.map(el => el.id);
-
   // перемиканя фото
   function animation(id) {
     // useEffect() => {
     const element = ref.current;
+
     if (id === 1) {
       gsap.from(element.querySelector('.kitchen-box'), {
-        duration: 1,
+        duration: 2,
         xPercent: 100,
-        zIndex: 6,
+        scale: 1.4,
         ease: ' power1. out out',
       });
-    } else if (id === 3) {
+      gsap.to(element.querySelector('.kitchen-box'), { zIndex: 9 });
+    } else {
+      gsap.to(element.querySelector('.kitchen-box'), { zIndex: 2 });
+    }
+    if (id === 3) {
       gsap.from(element.querySelector('.bathroom-box'), {
-        duration: 1,
+        duration: 2,
         xPercent: 100,
-        zIndex: 5,
+        scale: 1.4,
         ease: ' power1. out out',
       });
+      gsap.to(element.querySelector('.bathroom-box'), { zIndex: 9 });
+    } else {
+      gsap.to(element.querySelector('.bathroom-box'), { zIndex: 1 });
     }
     // }, []);
   }
 
   return (
     <>
-      <section className="how-clean container" ref={ref}>
+      <section
+        className="how-clean container"
+        ref={ref}
+        // style={{ zIndex: '5' }}
+      >
         <div className="how-clean-text">
           <h2>Как мы убираем</h2>
           <p>

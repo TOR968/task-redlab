@@ -20,7 +20,6 @@
 
   & .bathroom-box {
     position: relative;
-    z-index: 1;
     @include for-size(mobile) {
       margin-bottom: 20px;
     }
@@ -39,6 +38,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  right: 0;
 }
 
 .how-clean-text {
@@ -112,6 +112,8 @@
       margin-left: 60px;
       & .active {
         font-style: italic;
+        padding-left: 35px;
+
         &::before {
           opacity: 1;
           transform: translateX(0);
